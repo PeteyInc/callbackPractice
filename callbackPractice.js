@@ -7,9 +7,7 @@ Below is a sample problem
       alert(thingToSay);
    });
 
-
 and what you should write is the sayHi function that makes the code above work,
-
 
    var sayHi = function(str, cb){
     cb(str);
@@ -19,15 +17,11 @@ and what you should write is the sayHi function that makes the code above work,
       alert(thingToSay); //should alert ('Hi Katie')'
    });
 
-
 */
-
-
 
 function first (array, callback) {
   return callback(array[0]);
 }
-
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
@@ -35,49 +29,36 @@ first(names, function(firstName){
   console.log('The first name in names is ' + firstName);
 });
 
-
-
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
 
 function last(array, callback) {
   return callback(array[(array.length - 1)]);
 }
-  //Code Here for last
 
 last(names, function(lastName){
   console.log('The last name in names is ' + lastName);
 });
 
-
-
-
-
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
-
-
-
-
-
-  //Code Here for multiply
+function multiply(x, y, callback) {
+  return callback(x * y);
+}
 
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
 })
 
-
-
-
-
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
+function contains(array, name, callback) {
+  for (var i in array) {
+    if (array[i] === name) {
+      return callback(true);
+    }
+  } return callback(false);
+}
 
-
-
-
-  //Code Here for contains
 
 contains(names, 'Colt', function(result){
   if(result === true){
